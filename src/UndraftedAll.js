@@ -1,5 +1,5 @@
 import React from 'react';
-
+import PropTypes from 'prop-types';
 import Undrafted from './Undrafted'
 
 function UndraftedAll(props) {
@@ -41,11 +41,11 @@ function UndraftedAll(props) {
 }
 
 UndraftedAll.propTypes = {
-  players: React.PropTypes.array.isRequired,
-  format: React.PropTypes.string.isRequired,
-  query: React.PropTypes.string.isRequired,
-  search: React.PropTypes.func.isRequired,
-  fetch: React.PropTypes.func.isRequired,
+  players: PropTypes.array.isRequired,
+  format: PropTypes.string.isRequired,
+  query: PropTypes.string.isRequired,
+  search: PropTypes.func.isRequired,
+  fetch: PropTypes.func.isRequired,
 };
 
 export default UndraftedAll

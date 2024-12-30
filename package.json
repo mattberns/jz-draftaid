@@ -4,17 +4,37 @@
   "private": true,
   "homepage": "https://jayzheng.com/ff",
   "devDependencies": {
-    "react-scripts": "0.9.0"
+    "react-scripts": "^5.0.1"
   },
   "dependencies": {
-    "bootstrap": "^3.3.7",
-    "react": "^15.4.2",
-    "react-dom": "^15.4.2"
+    "bootstrap": "^5.3.3",
+    "prop-types": "^15.8.1",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "react-scripts": "^5.0.1",
+    "web-vitals": "^2.1.4",
+    "nth-check": "^2.1.1"
+  },
+  "overrides": {
+    "nth-check": "^2.1.1",
+    "postcss":"^8.4.38"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }

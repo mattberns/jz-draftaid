@@ -1,4 +1,5 @@
 import React, { PureComponent } from 'react';
+import PropTypes from 'prop-types';
 
 class PlayerTable extends PureComponent {
   rows() {
@@ -64,12 +65,12 @@ class PlayerTable extends PureComponent {
 }
 
 PlayerTable.propTypes = {
-  players: React.PropTypes.array.isRequired,
-  fields: React.PropTypes.array.isRequired,
+  players: PropTypes.array.isRequired,
+  fields: PropTypes.array.isRequired,
 
-  onClick: React.PropTypes.func,
-  size: React.PropTypes.number,
-  disableColor: React.PropTypes.bool,
+  onClick: PropTypes.func,
+  size: PropTypes.number,
+  disableColor: PropTypes.bool,
 };
 
 export default PlayerTable

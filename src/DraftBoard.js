@@ -24,11 +24,12 @@ class DraftBoard extends Component {
     }
 
     fetchPlayers(format) {
-      // const url = 'https://draftaid-api.herokuapp.com/rankings';
-      const url = 'https://jayzheng-ff-api.herokuapp.com/rankings';
+      //const url = 'https://draftaid-api.herokuapp.com/rankings';
+      const url = './ff/data.json';
       const self = this;
 
-      fetch(url+'?format='+format, {
+      console.log('./ff/'+format+'.json');
+      fetch('./ff/'+format+'.json', {
         method: 'get'
       }).then(function(response) {
         response.json().then(function(res){
@@ -109,7 +110,7 @@ class DraftBoard extends Component {
       }
 
       if (this.state.fetchError) {
-        return (<div className='row'>error fetching rankings...</div>)
+        return (<div className='row'>error fetching rankings poop...</div>)
       }
 
       return (

@@ -1,5 +1,5 @@
 import React from 'react';
-
+import PropTypes from 'prop-types';
 import PlayerTable from './PlayerTable'
 
 function Drafted(props) {
@@ -38,10 +38,10 @@ function Drafted(props) {
 }
 
 Drafted.propTypes = {
-  currentDraft: React.PropTypes.number.isRequired,
-  reset: React.PropTypes.func.isRequired,
-  undo: React.PropTypes.func.isRequired,
-  players: React.PropTypes.array.isRequired,
+  currentDraft: PropTypes.number.isRequired,
+  reset: PropTypes.func.isRequired,
+  undo: PropTypes.func.isRequired,
+  players: PropTypes.array.isRequired,
 };
 
 export default Drafted

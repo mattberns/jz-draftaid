@@ -1,5 +1,5 @@
 import React from 'react';
-
+import PropTypes from 'prop-types';
 import Undrafted from './Undrafted'
 
 function UndraftedPositions(props) {
@@ -59,8 +59,8 @@ function UndraftedPositions(props) {
 }
 
 UndraftedPositions.propTypes = {
-  draft: React.PropTypes.func.isRequired,
-  players: React.PropTypes.array.isRequired,
+  draft: PropTypes.func.isRequired,
+  players: PropTypes.array.isRequired,
 };
 
 export default UndraftedPositions

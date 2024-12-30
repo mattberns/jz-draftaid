@@ -15,6 +15,9 @@ function UndraftedAll(props) {
             <option value="standard">Standard</option>
             <option value="ppr">PPR</option>
             <option value="half_ppr">0.5 PPR</option>
+          </select> &nbsp;
+          <select value={ props.year } onChange={ props.fetch } >
+            <option value="2024">2024</option>
           </select>
         </div>
 
@@ -43,6 +46,7 @@ function UndraftedAll(props) {
 UndraftedAll.propTypes = {
   players: PropTypes.array.isRequired,
   format: PropTypes.string.isRequired,
+  year: PropTypes.string.isRequired,
   query: PropTypes.string.isRequired,
   search: PropTypes.func.isRequired,
   fetch: PropTypes.func.isRequired,

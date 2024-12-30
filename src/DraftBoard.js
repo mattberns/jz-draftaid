@@ -15,21 +15,20 @@ class DraftBoard extends Component {
           currentDraft: 0,
           fetchError: null,
           format: 'standard',
+          year: '2024',
           query: '',
       };
     }
 
     componentDidMount() {
-      this.fetchPlayers(this.state.format);
+      this.fetchPlayers(this.state.format, this.state.year);
     }
 
-    fetchPlayers(format) {
-      //const url = 'https://draftaid-api.herokuapp.com/rankings';
-      const url = './ff/data.json';
+    fetchPlayers(format, year) {
       const self = this;
 
-      console.log('./ff/'+format+'.json');
-      fetch('./ff/'+format+'.json', {
+      console.log('./'+format+'.json');
+      fetch('./data/'+year+'/'+format+'.json', {
         method: 'get'
       }).then(function(response) {
         response.json().then(function(res){
@@ -38,6 +37,7 @@ class DraftBoard extends Component {
             filteredPlayers: res.rankings,
             isLoading: false,
             format: format,
+            year: year,
             query: '',
           });
         });
@@ -121,6 +121,7 @@ class DraftBoard extends Component {
             fetch={ (e) => this.fetchPlayers(e.target.value) }
             search={ (e) => this.searchPlayers(e.target.value) }
             format={ this.state.format }
+            year={ this.state.year }
             query={ this.state.query }
           />
 

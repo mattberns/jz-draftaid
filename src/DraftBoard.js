@@ -14,7 +14,7 @@ class DraftBoard extends Component {
           isLoading: true,
           currentDraft: 0,
           fetchError: null,
-          format: 'standard',
+          format: 'ppr',
           year: '2024',
           query: '',
       };
@@ -27,7 +27,7 @@ class DraftBoard extends Component {
     fetchPlayers(format, year) {
       const self = this;
 
-      console.log('./'+format+'.json');
+      console.log(year);
       fetch('./data/'+year+'/'+format+'.json', {
         method: 'get'
       }).then(function(response) {
@@ -118,7 +118,7 @@ class DraftBoard extends Component {
           <UndraftedAll
             players={ this.state.filteredPlayers }
             draft={ (p) => this.draft(p) }
-            fetch={ (e) => this.fetchPlayers(e.target.value) }
+            fetch={ (e) => this.fetchPlayers(e.target.value, this.state.year) }
             search={ (e) => this.searchPlayers(e.target.value) }
             format={ this.state.format }
             year={ this.state.year }
